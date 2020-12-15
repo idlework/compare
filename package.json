@@ -47,9 +47,9 @@
     }
   },
   "lint-staged": {
-    "./lib/*.{ts}": [
-      "prettier --write",
-      "eslint --fix"
+    "./lib/*.ts": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "devDependencies": {
