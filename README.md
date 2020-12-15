@@ -5,8 +5,8 @@ Primitive set of functions to compare boolean, string, or number.
 ## Installation
 
 ```sh
-npm install mypluralize --save
-yarn add mypluralize
+npm install @idlework/compare --save
+yarn add @idlework/compare
 ```
 
 ## Usage
