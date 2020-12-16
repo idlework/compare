@@ -20,7 +20,7 @@ import {
   lessThanOrEqual,
 } from "@idlework/compare"
 // or
-import compare from "@idlework/compare"
+import * as compare from "@idlework/compare"
 // or
 const {
   equal,
@@ -32,16 +32,14 @@ const {
 // or
 const compare = require("@idlework/compare")
 
-// supported types: boolean, string, and number
+// supported types for equal are boolean, string, number, object, and array.
 const isEqual = equal(true, true)
 const isEqual = equal("a", "a")
 const isEqual = equal(1, 1)
+const isEqual = equal(obj, obj)
+const isEqual = equal(arr, arr)
 
-const isEqual = compare.equal(true, true)
-const isEqual = compare.equal("a", "a")
-const isEqual = compare.equal(1, 1)
-
-// other compare functions:
+// other compare functions, these work best with boolean, string, and number.
 const isGreaterThan = greaterThan(2, 1)
 const isGreaterThanOrEqual = greaterThanOrEqual(2, 1)
 const isLessThan = lessThan(2, 1)

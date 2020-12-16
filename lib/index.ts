@@ -1,4 +1,4 @@
-export type CompareType = string | number | boolean
+type CompareType = string | number | boolean | Array<any> | object
 export type CompareFunctionType = (a: CompareType, b: CompareType) => boolean
 
 /**

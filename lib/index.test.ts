@@ -7,21 +7,26 @@ import {
   lessThanOrEqual,
 } from "./"
 
-// TODO: extend with more types if needed
 const a = "a"
 const b = "b"
 const ab = "ab"
+const obj = { a, b }
+const arr = [a, b]
 
 const shouldBeEquel = (fn: CompareFunctionType) => {
   expect(fn(0, 0)).toBe(true)
   expect(fn(a, a)).toBe(true)
   expect(fn(true, true)).toBe(true)
+  expect(fn(obj, obj)).toBe(true)
+  expect(fn(arr, arr)).toBe(true)
 }
 
 const shouldNotBeEquel = (fn: CompareFunctionType) => {
   expect(fn(0, 1)).toBe(false)
   expect(fn(a, b)).toBe(false)
   expect(fn(true, false)).toBe(false)
+  expect(fn(obj, {})).toBe(false)
+  expect(fn(arr, [])).toBe(false)
 }
 
 const shouldBeLessThan = (fn: CompareFunctionType) => {
