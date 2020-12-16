@@ -1,4 +1,4 @@
-export declare type CompareType = string | number | boolean;
+declare type CompareType = string | number | boolean | Array<any> | object;
 export declare type CompareFunctionType = (a: CompareType, b: CompareType) => boolean;
 /**
  * Checks if two variables are equal.
@@ -35,3 +35,4 @@ export declare const lessThanOrEqual: (a: CompareType, b: CompareType) => boolea
  * @return {boolean}
  */
 export declare const greaterThanOrEqual: (a: CompareType, b: CompareType) => boolean;
+export {};

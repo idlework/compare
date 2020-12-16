@@ -1,6 +1,6 @@
 {
   "name": "@idlework/compare",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Primitive set of functions to compare boolean, string, or number.",
   "main": "./bin/index.js",
   "types": "./bin/index.d.ts",
