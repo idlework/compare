@@ -8,7 +8,10 @@
     "build": "tsc",
     "lint": "eslint ./lib/**",
     "test": "jest",
-    "coverage": "npm run test -- --coverage"
+    "coverage": "npm run test -- --coverage",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A bin",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
